@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Great Number Game</title>
+    <style>
+        .die{
+            font-size: 80px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1>+++++Welcome to the Great Number Game++++</h1>
+        <h1 class="die"> <%= die.message %>   </h1>
+        <h2>I'm thinking of a number between 1 and 100</h2>
+        <p>Take a guess!</p>
+        <p>GUESS WRONG MORE THAN <%= num.num %> TIMES AND YOU DIE...</p>
+        <form action="/guess" method="post">
+            <input type="text" name="guess">
+            <input type="submit" value="submit">
+        </form>
+        <%= result.num %>
+        <%= result.message %>
+        <a href="/reset"><%= result.resetBtn %></a>
+    </div>
+
+</body>
+
+</html>
